@@ -1,0 +1,20 @@
+hr {width: 380px}
+.wrapper {width: 600px;}
+header {height: 120px; background: blue;}
+hgroup h1 {color: white; padding: 16px 0 0 26px;}
+hgroup h5 {color: white; padding-Left: 20px;}
+nav {width: 580px; height: 25px; background:skyblue; margin-left: 20px;}
+nav li {float: Left; List-style-type:none; padding: 0 15px;}
+
+section {width:408px; background: #FFF; border:solid; float: left;}
+hgroup h2 { padding: 5px 0 0 10px;}
+
+article {width:400px; background: #CCC;}
+article p {padding: 5px;}
+
+aside {width:186px; height: 230px; background: #666; float:right;}
+hgroup h3 {color: #Fff; padding: 10px 0 0 16px;}
+aside article {width:185px; background: #666; color:white}
+
+footer {height: 48px; background: darkcyan; margin-top: -15px; clear: both;}
+footer p {color: white; padding: 18px 0 0 18px;}
