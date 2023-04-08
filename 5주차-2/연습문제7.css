@@ -1,0 +1,22 @@
+ol{
+    list-style-type : none;
+}
+
+div{
+    width: 400px;
+    border: 2px solid orangered;
+}
+
+span{
+    color: olive;
+    font-weight: bold;
+    font-size: 50px;
+    font-style: oblique;
+    float: left;
+    margin-right: 20px;
+}
+
+li{
+    margin-right: 40px;
+}
+
