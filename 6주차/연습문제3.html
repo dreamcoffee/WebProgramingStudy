@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>큰 자리수와 낮은자리수 같은지 비교</h3>
+    <hr>
+    <script>
+        function numberToString1(n) {
+            return (n + '').split('')
+        }
+        var number = prompt("숫자 입력");
+        var numberArr = numberToString1(number);
+        var first = numberArr[0];
+        var last = numberArr.at(-1);
+        if(first == last){
+            document.write(number);
+            document.write(': 같음')
+        }
+        else{
+            document.write(number);
+            document.write(': 다름')
+        }
+    </script>
+</body>
+</html>
