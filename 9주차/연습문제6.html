@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>정답의 동적 삽입</title>
+    </head>
+    <body>
+        <script>
+            function addAnswer(obj, text) {
+                let x = document.createElement("p");
+                x.innerHTML = text;
+                obj.parentElement.appendChild(x);
+                x.setAttribute("id", "click");
+
+                x.addEventListener("click",
+                    function() {
+                        let y = this.parentElement;
+                        y.removeChild(this);
+                    });
+            }
+        </script>
+        <h3>정답의 동적 삽입</h3>
+        <hr>
+        <div>
+            <p> Q1. What is the learning echnique that intelligent agents ought to take actions in an evnironment in
+                order to maximzie the notion of cumulative reward?
+            </p>
+            <button onclick="addAnswer(this, 'Reinforcement Learning')">A1.</button>
+        </div>
+        <div>
+            <p> Q2. What is the learning technique that maps an inpu to an output based on example input-outpat
+                paris?(It infers a function from labeled training data consisting of a set of training examples.)
+            </p>
+            <button onclick="addAnswer(this, 'Supervised Learning')">A2.</button>
+        </div>
+        <div>
+            <p> Q3. What is the learning technique that learns patterns from untagged data? (contrast to the supervised
+                learning, it exhibits self-organiztion that captures patterns as probability densities or a combination of
+                neural feature preferences.)
+            </p>
+            <button onclick="addAnswer(this, 'Unsupervised Learning')">A3.</button>
+        </div>
+    </body>
+</html>

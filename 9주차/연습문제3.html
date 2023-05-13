@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>z-index 스타일 프로퍼티</title>
+<style>
+div { position : absolute; }
+img { position : absolute; }
+</style>
+</head>
+<body>
+    <h3>z-index 스타일 프로퍼티</h3>
+    <hr>
+    <div>
+        <img src="/image/망고.png" 
+            width="200" height="300" alt="스페이드A">
+        <img src="/image/바나나.png" 
+            width="200" height="300" alt="스페이드2">
+        <img src="/image/사과.png" 
+            width="200" height="300" alt="스페이드3">
+        <img src="/image/카드뒷면.jpg" 
+            width="200" height="300" alt="스페이드7">
+    </div>
+    <script>
+        var imgArray = document.getElementsByTagName("img");
+        for(i=0; i<imgArray.length; i++) {
+            var obj = imgArray[i];
+            obj.style.zIndex=i;
+            obj.onclick = turnover; 
+        }
+
+        function turnover() {    
+            for(i=0; i<imgArray.length; i++) {
+                var obj = imgArray[i];
+                obj.style.zIndex++;
+                obj.style.zIndex %= imgArray.length;
+            }    
+        }
+    </script>
+</body>
+</html>

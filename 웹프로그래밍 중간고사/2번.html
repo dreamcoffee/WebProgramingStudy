@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문제2번</title>
+    <style>
+        th:hover{
+            transition: 3s;
+            background-color: gray; 
+        }
+
+        td:hover{
+            transition: 3s;
+            background-color: aliceblue; 
+        }
+        div{
+            width: 50%;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        div:hover{
+            transition: 1s;
+            margin-left: 20px;
+            margin-top : 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var row = prompt("행을 입력하세요");
+        var col = prompt("열을 입력하세요");
+        document.write('<table border = "1">');
+        for(var i = 0; i<row; i++){
+            document.write('<tr>'); 
+            for(var j=0; j<col; j++){
+                if(i==0){
+                    document.write('<th>');
+                    document.write("head")
+                    document.write('</th>');
+                }
+                else{
+                    document.write('<td>');
+                    document.write("data");
+                    document.write('</td>')
+                }
+                
+            }
+            document.write('</tr>')
+        }
+        document.write('</table>')    
+    </script>
+    <br>
+    <div>Table</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var num = 0;
+        var result = 0;
+        var numArray = document.getElementsByName("num");;
+        var priceArray = document.getElementsByName("price");
+        var valueArray = [25000,27000,25000];  
+        function Sum(){
+            num = 0;
+            result = 0;
+            for(var i=0; i<3; i++){
+                priceArray[i].value = valueArray[i] * numArray[i].value;
+                num = num + parseInt(numArray[i].value);
+                result += valueArray[i] * numArray[i].value;
+            }
+
+            document.getElementById("finalNum").value = num;
+            document.getElementById("finalPrice").value = result;
+        }
+
+        function Reset(){
+            document.getElementById("finalNum").value = 0;
+            document.getElementById("finalPrice").value = 0;
+
+            for(var i=0; i<3; i++){
+                priceArray[i].value = 0;
+                numArray[i].value = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>서적 주문 양식</h3>
+    <p>주문서</p>
+    <table border = "1">
+        <thead>
+            <tr>
+                <th>책 제목</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>합계</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>웹프로그래밍</td>
+                <td>25,000원</td>
+                <td><input name="num" type = "text" size="5px" value="0" ></td>
+                <td><input name = "price"  type = "text" value="0"> 원</td>
+            </tr>
+            <tr>
+                <td>자바프로그래밍</td>
+                <td>27,000원</td>
+                <td><input name="num" type = "text" size="5px" value="0"></td>
+                <td><input name = "price"  type = "text" value="0"> 원</td>
+            </tr>
+            <tr>
+                <td>웹프로그래밍</td>
+                <td>25,000원</td>
+                <td><input name = "num"  type = "text" size="5px" value="0"></td>
+                <td><input name = "price"  type = "text" value="0"> 원</td>
+            </tr>
+            <tr>
+                <td>합계</td>
+                <td></td>
+                <td><input id = "finalNum"  type = "text" size="5px" value="0"></td>
+                <td><input id = "finalPrice"  type = "text" value="0"> 원</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <input type="button" value="합계게산" onclick="Sum()">
+    <input type="button" value="초기화" onclick="Reset()">
+</body>
+</html>

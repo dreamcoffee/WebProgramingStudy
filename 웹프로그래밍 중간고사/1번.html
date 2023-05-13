@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    @keyframes Move{
+    50%{
+        margin-left: 90%;
+        margin-top: 0px;
+        color : blue;
+    }
+    100%{
+        margin-top: 0px;
+        margin-left: 0px;
+        color : red;
+    }
+    }
+    div{
+        color : red;
+
+        animation-name: Move;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    table {
+        border: 2.5px solid black;
+        border-collapse: collapse;
+    }
+
+    thead{
+        color: blue;
+    }
+
+    td, th{
+        border: 1px solid black;
+        width: 150px;
+        height: 20px;
+        padding: 5px;
+    }
+
+    th{
+        background-color: skyblue;
+    }
+
+    td:hover{
+        transition: 0.5s;
+        background-color: lightgray; 
+    }
+    </style>
+</head>
+<body>
+    <h3>2023 중간고사</h3>
+    <hr>
+    <div>문제1</div>
+    <form>
+        <fieldset>
+            <legend>인적사항</legend>
+              학년 : 
+              <input type="radio" name="grade" value="1"> 1학년
+              <input type="radio" name="grade" value="2"> 2학년
+              <input type="radio" name="grade" value="1"> 3학년
+              <input type="radio" name="grade" value="1"> 4학년
+              <br>
+              이름 : <input type="text">
+              <br>
+              학번 : <input type="password">
+          </fieldset>
+    </form>
+    
+        <h3>Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Protocol</th>
+                <th>Frequency</th>
+                <th>Bandwidth</th>
+                <th>Data rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">IEEE 802.11ac</td>
+                <td rowspan="4">5GHz</td>
+                <td>20MHz</td>
+                <td>Up to 346.8 Mbps</td>
+            </tr>
+            <tr>
+                <td>40Mhz</td>
+                <td>Up to 800 mbps</td>
+            </tr>
+            <tr>
+                <td>80mhz</td>
+                <td>Up to 1733.2 Mbps</td>
+            </tr>
+            <tr>
+                <td>160Mhz</td>
+                <td>Up to 3466.8 Mbps</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

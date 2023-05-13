@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #blueBox {
+            width: 100px;
+            height: 100px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            background-color: blue;
+        }
+
+        #yellowBox {
+            width: 100px;
+            height: 100px;
+            top: 30px;
+            left: 30px;
+            position: absolute;
+            background-color: yellow;
+        }       
+
+        #greenBox {
+            width: 100px;
+            height: 100px;
+            top: 60px;
+            left: 60px;
+            position: absolute;
+            background-color: green;
+        }
+
+        #blueBox:hover {
+            z-index: 1;
+        }
+
+        #yellowBox:hover{
+            z-index: 1;
+        }
+        
+        #greenBox:hover {
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="blueBox">Box #1</div>
+    <div id="yellowBox">Box #2</div>
+    <div id="greenBox">Box #3</div>
+</body>
+</html>
